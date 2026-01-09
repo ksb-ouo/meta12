@@ -12,7 +12,6 @@
       }
 
       body {
-        display: flex;
         height: 100vh;
         font-family: Arial, sans-serif;
         background-color: #f0f0f0;
@@ -21,28 +20,23 @@
       /* 전체 대시보드 */
       .dashboard {
         display: flex;
-        height: 100vh;
-        flex-direction: row;
-        flex: 1 0 auto;
-        min-height: 0;
+        height: 100%; /* 부모가 100vh(화면 전체 높이)를 사용하므로 그 공간을 100% 사용하겠다 */
+        width: 100%;
       }
 
       /* 왼쪽 네비게이션 */
       .nav {
-        width: 250px;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 20px;
-        flex-shrink: 0;
-
+        width: 220px; /* = flex: 0 0 220px; */
         color: white;
         background-color: darkslategrey;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
       }
 
       /* 오른쪽 전체 영역 */
       .right {
-        flex: 1;
+        width: calc(100% - 220px);
         display: flex;
         flex-direction: column;
       }
@@ -51,57 +45,41 @@
       .topbar {
         color: white;
         background-color: darkslateblue;
-        top: 0px;
-        z-index: 10; 
+        height: 60px;
+        padding: 20px;
       }
 
       /* 콘텐츠 영역 */
       .content {
-        top: 50px;
-        left: 50px;
         display: flex;
         flex: 1;
-        gap: 20px;
-        padding: 20px;
+        gap: 15px;
+        padding: 15px;
       }
 
       /* 메인 콘텐츠 */
       .main-content {
         background-color: white;
-        flex: 2;
-        padding: 40px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        border-right: 10px;
-        border-color: #f0f0f0;
+        flex: 3;
+        padding: 20px;
       }
 
       /* 서브 패널 */
       .side-panel {
         background-color: orange;
         flex: 1;
-        padding: 40px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        border-right: 10px;
-        border-color: #f0f0f0;
+        padding: 20px;
       }
 
       /* 하단 정보바 */
       .status {
         display: flex;
+        height: 40px;
         justify-content: center;
         align-items: center;
 
         color: white;
         background-color: lightslategray;
-        position: sticky;
-        object-position: bottom;
-        bottom: 0px;
-
-        
       }
     </style>
   </head>
