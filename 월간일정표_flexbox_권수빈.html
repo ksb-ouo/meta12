@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+
+            height: 100vh;
+            width: 100vw;
+        }
+
+        h1 {
+            background-color: rgb(0, 36, 0);
+            color: white;
+
+            text-align: center;
+            padding: 15px;
+        }
+
+        .calender {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .cell {
+
+        }
+
+        .header {
+        }
+
+        .holiday {
+            background-color: lightcoral;
+        }
+
+        .holiday:empty {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>월간 일정표</h1>
+
+    <div class="calendar">
+        <div class="cell header">일</div>
+        <div class="cell header">월</div>
+        <div class="cell header">화</div>
+        <div class="cell header">수</div>
+        <div class="cell header">목</div>
+        <div class="cell header">금</div>
+        <div class="cell header">토</div>
+
+        <div class="cell holiday"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell">1  신년휴일</div>
+        <div class="cell">2  휴강</div>
+        <div class="cell holiday">3</div>
+
+        <div class="cell holiday">4</div>
+        <div class="cell">5HTML</div>
+        <div class="cell">6HTML</div>
+        <div class="cell">7CSS</div>
+        <div class="cell">8CSS</div>
+        <div class="cell">9CSS</div>
+        <div class="cell holiday">10</div>
+
+        <div class="cell holiday">11</div>
+        <div class="cell">12CSS</div>
+        <div class="cell">13개인 웹페이지 설계</div>
+        <div class="cell">14JavaScript</div>
+        <div class="cell">15JavaScript</div>
+        <div class="cell">16JavaScript</div>
+        <div class="cell holiday">17</div>
+
+        <div class="cell holiday">18</div>
+        <div class="cell">19JavaScript</div>
+        <div class="cell">20JavaScript</div>
+        <div class="cell">21개인 웹페이지 만들기</div>
+        <div class="cell">22개인 웹페이지 만들기</div>
+        <div class="cell">23개인 웹페이지 만들기</div>
+        <div class="cell holiday">24</div>
+
+        <div class="cell holiday">25</div>
+        <div class="cell">26과정 마무리 테스트</div>
+        <div class="cell">27</div>
+        <div class="cell">28</div>
+        <div class="cell">29</div>
+        <div class="cell">30</div>
+        <div class="cell holiday"></div>
+    </div>
+</body>
+</html>
