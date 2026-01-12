@@ -11,94 +11,208 @@
             padding: 0;
         }
 
-        body {
-            display: flex;
-            flex-direction: column;
-
-            height: 100vh;
-            width: 100vw;
+        .calendar-grid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
         }
 
         h1 {
-            background-color: rgb(0, 36, 0);
-            color: white;
-
-            text-align: center;
-            padding: 15px;
-        }
-
-        .calender {
             display: flex;
-            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            background-color: #1976d2;
         }
 
-        .cell {
-
+        /* 모든 날짜 셀 공통 스타일 */
+        .day-header,
+        .day-cell {
+            flex: 1 1 calc(100% / 7);
+            min-width: calc(100% / 7);
+            min-height: calc(100% / 7);
+            border: 1px solid #000000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8px;
         }
 
-        .header {
+            /* 요일 헤더 */
+        .day-header {
+            background-color: #91b6d9;
+            color: white;
+            font-weight: bold;
+            padding: 12px 4px;
+            height: 20px;
         }
 
-        .holiday {
-            background-color: lightcoral;
+            /* 주말 색상 - 1번째(일), 7번째(토) 열 */
+        .day-cell:nth-child(7n+1) {  /* 일요일 */
+            background-color: #fff5f5;
+            color: #d32f2f;
         }
 
-        .holiday:empty {
-            background-color: white;
+        .day-cell:nth-child(7n) {     /* 토요일 (7의 배수) */
+            background-color: #f0f5ff;
+            color: #1976d2;
+        }
+
+        .empty {
+            background-color: #fafafa;
         }
     </style>
 </head>
 <body>
-    <h1>월간 일정표</h1>
+    <div class="calendar-container">
+        <h1>2026년 1월</h1>
 
-    <div class="calendar">
-        <div class="cell header">일</div>
-        <div class="cell header">월</div>
-        <div class="cell header">화</div>
-        <div class="cell header">수</div>
-        <div class="cell header">목</div>
-        <div class="cell header">금</div>
-        <div class="cell header">토</div>
+            <div class="calendar-grid">
+                <!-- 요일 헤더 -->
+                <div class="day-header sunday">일</div>
+                <div class="day-header">월</div>
+                <div class="day-header">화</div>
+                <div class="day-header">수</div>
+                <div class="day-header">목</div>
+                <div class="day-header">금</div>
+                <div class="day-header saturday">토</div>
 
-        <div class="cell holiday"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell">1  신년휴일</div>
-        <div class="cell">2  휴강</div>
-        <div class="cell holiday">3</div>
+                <!-- 1월 1일 = 목요일 → 앞에 빈 칸 4개 -->
+                <div class="day-cell empty"></div>
+                <div class="day-cell empty"></div>
+                <div class="day-cell empty"></div>
+                <div class="day-cell empty"></div>
 
-        <div class="cell holiday">4</div>
-        <div class="cell">5HTML</div>
-        <div class="cell">6HTML</div>
-        <div class="cell">7CSS</div>
-        <div class="cell">8CSS</div>
-        <div class="cell">9CSS</div>
-        <div class="cell holiday">10</div>
+                <!-- 1주차 -->
+                <div class="day-cell special">
+                    <div class="date">1</div>
+                    <div class="content">신년휴일</div>
+                </div>
 
-        <div class="cell holiday">11</div>
-        <div class="cell">12CSS</div>
-        <div class="cell">13개인 웹페이지 설계</div>
-        <div class="cell">14JavaScript</div>
-        <div class="cell">15JavaScript</div>
-        <div class="cell">16JavaScript</div>
-        <div class="cell holiday">17</div>
+                <div class="day-cell">
+                    <div class="date">2</div>
+                </div>
 
-        <div class="cell holiday">18</div>
-        <div class="cell">19JavaScript</div>
-        <div class="cell">20JavaScript</div>
-        <div class="cell">21개인 웹페이지 만들기</div>
-        <div class="cell">22개인 웹페이지 만들기</div>
-        <div class="cell">23개인 웹페이지 만들기</div>
-        <div class="cell holiday">24</div>
+                <div class="day-cell saturday">
+                    <div class="date">3</div>
+                    <div class="content">휴강</div>
+                </div>
 
-        <div class="cell holiday">25</div>
-        <div class="cell">26과정 마무리 테스트</div>
-        <div class="cell">27</div>
-        <div class="cell">28</div>
-        <div class="cell">29</div>
-        <div class="cell">30</div>
-        <div class="cell holiday"></div>
+                <!-- 2주차 -->
+                <div class="day-cell sunday">
+                    <div class="date">4</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">5</div>
+                    <div class="content">HTML</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">6</div>
+                    <div class="content">HTML</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">7</div>
+                    <div class="content">CSS</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">8</div>
+                    <div class="content">CSS</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">9</div>
+                    <div class="content">CSS</div>
+                </div>
+                <div class="day-cell saturday">
+                    <div class="date">10</div>
+                </div>
+
+                <!-- 3주차 -->
+                <div class="day-cell sunday">
+                    <div class="date">11</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">12</div>
+                    <div class="content">CSS</div>
+                </div>
+                <div class="day-cell special">
+                    <div class="date">13</div>
+                    <div class="content">개인웹페이지<br>설계</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">14</div>
+                    <div class="content">Javascript</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">15</div>
+                    <div class="content">Javascript</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">16</div>
+                    <div class="content">Javascript</div>
+                </div>
+                <div class="day-cell saturday">
+                    <div class="date">17</div>
+                </div>
+
+                <!-- 4주차 -->
+                <div class="day-cell sunday">
+                    <div class="date">18</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">19</div>
+                    <div class="content">Javascript</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">20</div>
+                    <div class="content">Javascript</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">21</div>
+                    <div class="content">개인웹페이지<br>만들기</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">22</div>
+                    <div class="content">개인웹페이지<br>만들기</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">23</div>
+                    <div class="content">개인웹페이지<br>만들기</div>
+                </div>
+                <div class="day-cell saturday">
+                    <div class="date">24</div>
+                </div>
+
+                <!-- 5주차 -->
+                <div class="day-cell sunday">
+                    <div class="date">25</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">26</div>
+                    <div class="content">과정마무리<br>테스트</div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">27</div>
+                    <div class="content"></div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">28</div>
+                    <div class="content"></div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">29</div>
+                    <div class="content"></div>
+                </div>
+                <div class="day-cell">
+                    <div class="date">30</div>
+                    <div class="content"></div>
+                </div>
+
+                <div class="day-cell empty"></div>
+
+            </div>
     </div>
 </body>
 </html>
