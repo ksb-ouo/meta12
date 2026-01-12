@@ -15,6 +15,8 @@
       }
 
       .battery {
+        /* 아래 4줄은 무조건 가운데에 배치하는 방법임. */
+        /* flex 코드(justify-content:center; align-items:center;)와 똑같은 용도로 쓰인다. */
         position: absolute;
         top: 50%;
         left: 50%;
@@ -49,7 +51,7 @@
         left: 38%;
         top: 40%;
         z-index: 1;
-        animation: battery-bolt 2s linear infinite;
+        animation: battery-bolt 2s linear infinite; /* 번개 아이콘에 애니메이션 삽입 (: 애니메이션 이름 / 시간 / 방식 / 횟수) */
       }
 
       .charge {
@@ -59,9 +61,12 @@
         position: absolute;
         bottom: 0;
         border-radius: 14px;
-        animation: battery-charge 8s linear infinite;
+        animation: battery-charge 8s linear infinite; /* 배터리에 서서히 차오르는 애니메이션 */
       }
 
+
+      /* keyframes 애니메이션은 복잡한 대신 자세하게 구간을 나누어 설정할 수 있음. */
+      
       @keyframes battery-bolt {
         50% {
           transform: scale(1.3);
