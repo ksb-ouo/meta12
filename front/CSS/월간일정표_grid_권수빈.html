@@ -11,6 +11,10 @@
             padding: 0;
         }
 
+        body {
+            padding: 20px; /* box 구조 상 padding을 주는 게 좋음. (마지막에 줄 것.) */
+        }
+
         h1 {
             background-color: rgb(0, 36, 0);
             color: white;
@@ -39,7 +43,7 @@
 
             display: flex;
             justify-content: center; /* 수직 가운데 */
-            align-items: center; /* 수평 가운데 */
+            /* align-items: center; 수평 가운데 */
             text-align: center; /* 여러 줄 가운데 */
         }
 
@@ -50,6 +54,11 @@
             color: white;
 
             border-bottom: 2px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
         .holiday {
