@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flexbox 레이아웃 예제</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+
+      /* 전체 페이지 */
+      .page {
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+        width: 100%;
+      }
+
+      /* 헤더 */
+      .header {
+        height: 60px;
+        
+        background-color: darkblue;
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* 메인 영역 (사이드 + 콘텐츠) */
+      .main {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        background-color: #f0f0f0;
+      }
+
+      /* 사이드 메뉴 */
+      .sidebar {
+        width: 250px;
+
+        flex-direction: column;
+
+        background-color: blue;
+        padding: 20px;
+      }
+
+      /* 콘텐츠 영역 */
+      .content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        gap: 20px;
+        padding: 20px;
+      }
+
+      /* 본문 */
+      .article {
+        background-color: white;
+        flex: 1 1 calc((100% - 120px)*0.5 );
+
+        padding: 20px;
+      }
+
+      /* 이벤트 광고 */
+      .event {
+        background-color: yellow;
+        flex: 1 1 calc((100% - 120px)*0.25);
+
+        padding: 20px;
+      }
+
+      /* 로그인 창 */
+      .login {
+        background-color: mediumspringgreen;
+
+        flex: 1 1 calc((100% - 120px)*0.25);
+        padding: 20px;
+      }
+
+      /* 푸터 */
+      .footer {
+        background-color: darkblue;
+        color: white;
+
+        height: 60px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">헤더 (로고 / 상단메뉴)</header>
+
+      <div class="main">
+        <nav class="sidebar">사이드 메뉴</nav>
+
+        <section class="content">
+          <article class="article">본문 콘텐츠</article>
+
+          <div class="event">이벤트 광고</div>
+
+          <aside class="login">로그인 창</aside>
+        </section>
+      </div>
+
+      <footer class="footer">푸터</footer>
+    </div>
+  </body>
+</html>

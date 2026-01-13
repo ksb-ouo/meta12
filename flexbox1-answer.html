@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flexbox 대시보드 레이아웃</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+        font-family: sans-serif;
+      }
+
+      /* 전체 대시보드 */
+      .dashboard {
+        display: flex;
+        height: 100%; /* 부모가 100vh(화면높이전체)를 차지하므로 그 공간을 100% 사용하겠다 */
+      }
+
+      /* 왼쪽 네비게이션 */
+      .nav {
+        width: 220px;
+        /* flex: 0 0 220px; */
+        background-color: #1e272e;
+        color: white;
+        padding: 20px;
+      }
+
+      /* 오른쪽 전체 영역 */
+      .right {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      /* 상단바 */
+      .topbar {
+        background-color: #485460;
+        height: 60px;
+        padding: 20px;
+        color: white;
+      }
+
+      /* 콘텐츠 영역 */
+      .content {
+        display: flex;
+        background-color: #d2dae2;
+        flex: 1;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      /* 메인 콘텐츠 */
+      .main-content {
+        background-color: #fff;
+        flex: 3;
+        padding: 20px;
+      }
+
+      /* 서브 패널 */
+      .side-panel {
+        background-color: #ffa801;
+        flex: 1;
+        padding: 20px;
+      }
+
+      /* 하단 정보바 */
+      .status {
+        background-color: #808e9b;
+        height: 40px;
+        color: white;
+        /* <아래3줄> 가운데 배치시키는 공식!!! */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="nav">왼쪽 네비게이션</div>
+
+      <div class="right">
+        <header class="topbar">상단바 (검색 / 사용자 정보)</header>
+
+        <main class="content">
+          <section class="main-content">메인 콘텐츠 (차트 / 목록)</section>
+
+          <aside class="side-panel">서브 패널 (알림 / 요약)</aside>
+        </main>
+
+        <footer class="status">하단 정보바</footer>
+      </div>
+    </div>
+  </body>
+</html>

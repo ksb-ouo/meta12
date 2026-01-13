@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>중첩 Flexbox 레이아웃</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+
+      /* 전체 */
+      .page {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+      }
+
+      /* 헤더 */
+      .header {
+        display: flex;
+        background-color: rgb(34, 34, 34);
+
+        justify-content: space-between;
+        padding: 15px 30px; /* padding(띄운다): (위, 아래) (좌우) */
+      }
+
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        background-color: rgb(82, 82, 82);
+
+        padding: 10px 20px;
+      }
+
+      .util {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        background-color: rgb(175, 175, 175);
+
+        padding: 10px 20px;
+      }
+
+      /* 메인 */
+      .main {
+        flex: 1;
+        display: flex;
+      }
+
+      /* 사이드바 */
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+
+        padding: 20px;
+        gap: 15px;
+
+        background-color: gray;
+      }
+
+      .profile {
+        color: white;
+        background-color: turquoise;
+
+        padding: 20px;
+      }
+
+      .menu {
+        color: white;
+        background-color: rgba(0, 255, 255, 0.562);
+        flex: 1;
+
+        padding: 20px;
+      }
+
+      /* 콘텐츠 */
+      .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        
+        padding: 20px;
+        gap: 20px;
+      }
+
+      /* 배너 */
+      .banner {
+        background-color: orange;
+
+        padding: 20px;
+      }
+
+      /* 카드 영역 */
+      .cards {
+        display: flex;
+
+        gap: 20px;
+      }
+
+      .card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        border: 1px solid #ccc;
+      }
+
+      .card-header {
+        height: 40px;
+
+        color: white;
+        background-color: greenyellow;
+
+        padding: 6px;
+      }
+
+      .card-body {
+        height: 60px;
+
+        background-color: white;
+
+        padding: 20px;
+      }
+
+      /* 위젯 */
+      .widgets {
+        display: flex;
+        
+        gap: 15px;
+      }
+
+      .widget {
+        flex: 1;
+        color: white;
+        background-color: rgb(202, 100, 211);
+
+        padding: 20px;
+      }
+
+      /* 푸터 */
+      .footer {
+        color: white;
+        background-color: rgb(34, 34, 34);
+        padding: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 위의 세 줄 = text-align: center; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!-- 헤더 -->
+      <header class="header">
+        <div class="logo">로고</div>
+        <div class="util">유틸 메뉴</div>
+      </header>
+
+      <!-- 메인 -->
+      <div class="main">
+        <!-- 사이드바 -->
+        <aside class="sidebar">
+          <div class="profile">프로필 박스</div>
+          <div class="menu">메뉴 리스트</div>
+        </aside>
+
+        <!-- 콘텐츠 -->
+        <section class="content">
+          <div class="banner">상단 배너</div>
+
+          <!-- 카드 영역 -->
+          <div class="cards">
+            <div class="card">
+              <div class="card-header">카드 헤더</div>
+              <div class="card-body">카드 본문</div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">카드 헤더</div>
+              <div class="card-body">카드 본문</div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">카드 헤더</div>
+              <div class="card-body">카드 본문</div>
+            </div>
+          </div>
+
+          <!-- 위젯 영역 -->
+          <div class="widgets">
+            <div class="widget">위젯 A</div>
+            <div class="widget">위젯 B</div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 푸터 -->
+      <footer class="footer">푸터</footer>
+    </div>
+  </body>
+</html>

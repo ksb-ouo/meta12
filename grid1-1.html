@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2 {
+            /* 가운데 정렬 */
+            text-align: center;
+            width: 600px;
+        }
+
+        .account-book {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 1fr: 동일한 비율로. */
+            /* repeat(4, 1fr) = 4개의 열(컬럼)을 동일한 비율(1fr)로 생성 */
+
+            max-width: 600px;
+            /* 최대가 600px, 작아질 수는 있음 */
+
+            border-left: 1px solid gray;
+            border-top: 1px solid gray;
+
+        }
+
+        .cell {
+            border-right: 1px solid gray;
+            border-bottom: 1px solid gray;
+
+            /* 아래는 표를 깔끔하게 만드는 용도. */
+            padding: 10px;
+            font-size: 14px;
+
+            /* 글자 가운데 정렬. */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header {
+            background-color: #00aaff;
+            color: white;
+            font-weight: bold;
+            
+            border-bottom: 2px solid black;
+        }
+
+        .number {
+            justify-content: flex-end; /* 오른쪽 정렬 (flex-end) */
+            /* grid는 주축이 항상 가로 방향으로 고정, justify는 가로 정렬 */
+        }
+
+        .footer {
+            background-color: #ffe082;
+            font-weight: bold;
+        }
+
+        .merge-2 {
+            grid-column: span 2; /* 2개의 행을 병합해서 가지도록 함 */
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h2>나의 가계부</h2>
+    <div class="account-book">
+        <div class="cell header">날짜</div>
+        <div class="cell header">항목</div>
+        <div class="cell header">수입</div>
+        <div class="cell header">지출</div>
+
+        <div class="cell">12월 01일</div>
+        <div class="cell">월급</div>
+        <div class="cell number">3,000,000</div>
+        <div class="cell number"></div>
+
+        <div class="cell">12월 03일</div>
+        <div class="cell">식비</div>
+        <div class="cell number"></div>
+        <div class="cell number">50,000</div>
+
+        <div class="cell">12월 05일</div>
+        <div class="cell">교통비</div>
+        <div class="cell number"></div>
+        <div class="cell number">30,000</div>
+
+        <div class="cell">12월 10일</div>
+        <div class="cell">부수입</div>
+        <div class="cell number">200,000</div>
+        <div class="cell number"></div>
+
+        <div class="cell">12월 15일</div>
+        <div class="cell">통신비</div>
+        <div class="cell number"></div>
+        <div class="cell number">80,000</div>
+
+
+        <div class="cell footer merge-2">합계</div>
+        <div class="cell footer number">3,200,000</div>
+        <div class="cell footer number">160,000</div>
+
+        <div class="cell footer merge-2">잔액</div>
+        <div class="cell footer merge-2 number">3,040,000</div>
+    </div>
+</body>
+</html>
