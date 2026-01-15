@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 배열을 사용하지 않으면, 4개의 변수와 화면 출력을 위해 4개의 console.log 명령이 필요함 (너무 긺)
+        let spring = "봄";
+        let summer = "여름";
+        let fall = "가을";
+        let winter = "겨울";
+
+        console.log(spring);
+        console.log(summer);
+        console.log(fall);
+        console.log(winter);
+
+
+        // 배열 사용의 예
+        // 1개의 변수와 1개의 console.log 사용
+        // index(예, [0])를 이용하면 개별 아이템을 가져올 수 있음.
+        let season = ["봄", "여름", "가을", "겨울"]; /* 각 항목의 순서별 부여 번호는 첫 번째부터 0, 1, 2, 3 ... 으로 정의됨 */
+        console.log(season);
+        console.log(season[0]); /* 하나씩 출력하는 방법: 봄(첫번째 항목) */
+        console.log(season[3]); /* 하나씩 출력하는 방법: 겨울(네번째 항목) */
+
+
+        let number1 = 10000;
+        console.log(number1[0]);  // undefined
+
+        let number2 = "10000";
+        console.log(number2[0]);  // 1
+        // 자바스크립트는 " "(인용구) 사이에 들어있는 문자열, 인용구를 배열 취급 한다.
+        // ex) 위쪽 문단의 winter는 ["겨", "울"]과 같은 형태로 인식
+        // 그러므로 마치 배열처럼 문자 하나하나를 따로 취급할 수 있음
+        // 그러나 숫자는 유사 배열 취급하지 않음
+    </script>
+</body>
+
+</html>
