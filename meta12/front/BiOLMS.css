@@ -29,22 +29,27 @@ li {
     padding: 10px 24px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-    gap: 10px;
+    gap: 20px;
 
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
-.navbar-logo img {
+.navbar-logo i {
+    font-size: 24px;
+    font-weight: 700;
+
     justify-content: center;
     align-items: center;
+
+    color: #228000;
 }
 
 
 .navbar-logo a {
     font-size: 24px;
-    font-weight: 900;
+    font-weight: 700;
     color: #228000;
 }
 
@@ -92,7 +97,8 @@ li {
 .navbar-toggleBtn {
     display: none;
     font-size: 24px;
-    color: #2c3e50;
+    font-weight: bold;
+    color: #228000;
     cursor: pointer;
     padding: 5px;
 }
@@ -108,7 +114,16 @@ li {
 }
 
 .home-Bigimg img {
-    flex: 1 1;
+    width: 100vw;
+    /* 뷰포트 가로폭 100% */
+    height: 400px;
+    /* 뷰포트 높이 (조절 가능) */
+    object-fit: cover;
+    /* 비율 유지하며 꽉 채움 */
+    object-position: center;
+    /* 중앙 기준 */
+
+    padding-top: 30px;
 }
 
 .Bigimg-icon {
@@ -116,50 +131,63 @@ li {
     justify-content: center;
     align-items: center;
     gap: 20px;
-}
 
-
-.Bigimg-icon .icon1 {
     font-size: 25px;
     font-weight: 900;
 
     color: #888;
-
-    transition: color 0.5s;
 }
 
-.Bigimg-icon .icon1:hover {
-    color: #333;
-}
-
-
-.Bigimg-icon .icon2 {
-    font-size: 25px;
-    font-weight: 900;
-
-    color: #888;
-
-    transition: color 0.5s;
-}
-
-.Bigimg-icon .icon2:hover {
-    color: #333;
-}
-
-
+.Bigimg-icon .icon1,
+.Bigimg-icon .icon2,
 .Bigimg-icon .icon3 {
-    font-size: 25px;
-    font-weight: 900;
-
-    color: #888;
-
     transition: color 0.5s;
 }
 
+.Bigimg-icon .icon1:hover,
+.Bigimg-icon .icon2:hover,
 .Bigimg-icon .icon3:hover {
     color: #333;
 }
 
+
+.menu-Icon {
+    padding-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-Icon span {
+    /* 나중에 a href로 바꾸면 span을 a로 바꿀 것 */
+    width: 120px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.menu-Icon .menuIcon1,
+.menu-Icon .menuIcon3,
+.menu-Icon .menuIcon5 {
+    background-color: #228200;
+}
+
+.menu-Icon .menuIcon2,
+.menu-Icon .menuIcon4 {
+    background-color: #8BBA7A;
+}
 
 
 
