@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+    padding: 10px 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    gap: 10px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-logo img {
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navbar-logo a {
+    font-size: 24px;
+    font-weight: 900;
+    color: #228000;
+}
+
+
+.navbar-menu {
+    display: flex;
+    gap: 30px;
+}
+
+
+.navbar-menu a {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+    padding: 8px 12px;
+
+    transition: color 0.5s;
+}
+
+.navbar-menu a:hover {
+    color: #228000;
+}
+
+
+
+
+.btn-login {
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 10px;
+
+    border: 1px solid #333;
+    transition: color 0.5s;
+    transition: border-color 0.5s;
+}
+
+.btn-login:hover {
+    color: #228000;
+    border-color: #228000;
+}
+
+
+.navbar-toggleBtn {
+    display: none;
+    font-size: 24px;
+    color: #2c3e50;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+
+.home-Bigimg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.home-Bigimg img {
+    flex: 1 1;
+}
+
+.Bigimg-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.Bigimg-icon .icon1 {
+    font-size: 25px;
+    font-weight: 900;
+
+    color: #888;
+
+    transition: color 0.5s;
+}
+
+.Bigimg-icon .icon1:hover {
+    color: #333;
+}
+
+
+.Bigimg-icon .icon2 {
+    font-size: 25px;
+    font-weight: 900;
+
+    color: #888;
+
+    transition: color 0.5s;
+}
+
+.Bigimg-icon .icon2:hover {
+    color: #333;
+}
+
+
+.Bigimg-icon .icon3 {
+    font-size: 25px;
+    font-weight: 900;
+
+    color: #888;
+
+    transition: color 0.5s;
+}
+
+.Bigimg-icon .icon3:hover {
+    color: #333;
+}
+
+
+
+
+
+/* [반응형 - 모바일 (768px 이하)] */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        /* 왼쪽 정렬 */
+        padding: 16px 24px;
+    }
+
+    .navbar-menu {
+        display: none;
+        /* 햄버거 아이콘을 클릭하면 보이도록 만들어야 함 -> 클릭 반응은 자바스크립트로 제작 */
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        gap: 0;
+    }
+
+    /* JS로 active 클래스가 붙으면 보이기 */
+    /* 자바스크립트에서 햄버거 아이콘을 클릭하면 .active가 생겼다가 사라졌다 함(toggle 토글) */
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        width: 100%;
+    }
+
+    .navbar-menu a {
+        padding: 16px 20px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+    .dropdown-content {
+        /* 모바일 환경에서는 호버가 되지 않기 때문에 absolute로 지정했던 모든 스타일링을 기본으로 변경함 */
+        display: block;
+        position: static;
+        box-shadow: none;
+        background-color: #f9f9f9;
+        width: 100%;
+        transform: none;
+        padding: 0;
+    }
+
+    .dropdown-content li a {
+        padding-left: 40px;
+        font-size: 14px;
+        color: #777;
+    }
+
+    /* 햄버거 버튼 보이기 & 위치 잡기 */
+    .navbar-toggleBtn {
+        display: block;
+        position: absolute;
+        right: 24px;
+        top: 18px;
+    }
+
+    /* 모바일에서 로그인 버튼 숨김 */
+    .btn-login {
+        display: none;
+    }
+}
