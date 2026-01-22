@@ -205,11 +205,8 @@ li {
     justify-content: center;
     align-items: center;
 
-    padding: 20px;
-    padding-top: 20%;
-    padding-bottom: 20%;
-
-    height: 60vh;
+    min-height: 60vh;
+    padding: 100px 20px;
 }
 
 
@@ -281,26 +278,27 @@ li {
 
 
 
+
+
+
+
+
 /* [반응형 - 모바일 (768px 이하)] */
 @media screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
-        /* 왼쪽 정렬 */
         padding: 16px 24px;
     }
 
     .navbar-menu {
         display: none;
-        /* 햄버거 아이콘을 클릭하면 보이도록 만들어야 함 -> 클릭 반응은 자바스크립트로 제작 */
         flex-direction: column;
         width: 100%;
         margin-top: 10px;
         gap: 0;
     }
 
-    /* JS로 active 클래스가 붙으면 보이기 */
-    /* 자바스크립트에서 햄버거 아이콘을 클릭하면 .active가 생겼다가 사라졌다 함(toggle 토글) */
     .navbar-menu.active {
         display: flex;
     }
@@ -315,7 +313,6 @@ li {
     }
 
     .dropdown-content {
-        /* 모바일 환경에서는 호버가 되지 않기 때문에 absolute로 지정했던 모든 스타일링을 기본으로 변경함 */
         display: block;
         position: static;
         box-shadow: none;
@@ -331,7 +328,6 @@ li {
         color: #777;
     }
 
-    /* 햄버거 버튼 보이기 & 위치 잡기 */
     .navbar-toggleBtn {
         display: block;
         position: absolute;
@@ -339,7 +335,6 @@ li {
         top: 18px;
     }
 
-    /* 모바일에서 로그인 버튼 숨김 */
     .btn-login {
         display: none;
     }
