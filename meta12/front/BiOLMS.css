@@ -7,6 +7,19 @@
 body {
     font-family: "Poppins", sans-serif;
     background-color: #f4f4f4;
+    color: #333;
+
+    margin: 0;
+}
+
+section {
+    height: 100vh;
+}
+
+img {
+    height: auto;
+    width: auto;
+    background-size: cover;
 }
 
 
@@ -59,14 +72,14 @@ li {
 
 .navbar-menu {
     display: flex;
-    gap: 30px;
+    gap: 100px;
 }
 
 
 .navbar-menu a {
     display: block;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
     padding: 8px 12px;
 
@@ -134,7 +147,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
 
     font-size: 25px;
     font-weight: 900;
@@ -166,8 +179,8 @@ li {
 
 .menu-Icon span {
     /* 나중에 a href로 바꾸면 span을 a로 바꿀 것 */
-    width: 120px;
-    height: 40px;
+    width: 200px;
+    height: 60px;
 
     display: flex;
     justify-content: center;
@@ -175,7 +188,7 @@ li {
     text-align: center;
 
     color: white;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 500;
 
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -205,7 +218,6 @@ li {
     justify-content: center;
     align-items: center;
 
-    min-height: 60vh;
     padding: 100px 20px;
 }
 
@@ -239,8 +251,151 @@ li {
 
 /* 3번째 페이지 시작 */
 
+.home-edu {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+
+    padding: 150px;
+    max-width: 80vw;
+}
 
 
+.edu-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.represent-edu {
+    padding: 10px;
+    font-size: 36px;
+    font-weight: 900;
+    color: #228000;
+}
+
+.edu-icons {
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 10px;
+
+    border: 1px solid #333;
+    transition: color 0.5s;
+    transition: border-color 0.5s;
+}
+
+.edu-icons:hover {
+    color: #228000;
+    border-color: #228000;
+}
+
+
+.educations {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex: 0 1 0;
+
+    gap: 50px;
+    padding-top: 20px;
+}
+
+.edu1,
+.edu2,
+.edu3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.edu1 .h3,
+.edu2 .h3,
+.edu3 .h3 {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.edu1 .p,
+.edu2 .p,
+.edu3 .p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #888;
+}
+
+
+
+/* 4번째 페이지 시작 */
+
+.home-notice {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+
+    padding: 150px;
+    max-width: 80vw;
+}
+
+
+.notice-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 5%;
+}
+
+.represent-notice {
+    padding: 10px;
+    font-size: 36px;
+    font-weight: 900;
+    color: #228000;
+}
+
+.notice-icons {
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 10px;
+
+    border: 1px solid #333;
+    transition: color 0.5s;
+    transition: border-color 0.5s;
+}
+
+.notice-icons:hover {
+    color: #228000;
+    border-color: #228000;
+}
+
+
+.notice-inside {
+    display: flex;
+    flex-direction: column;
+
+    padding: 50px 30px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+}
+
+.insides {
+    border-left: 5px solid #228000;
+    padding-left: 30px;
+
+    gap: 20px;
+}
+
+.notice-inside p {
+    justify-content: center;
+    align-items: left;
+    font-size: 16px;
+}
 
 
 
@@ -248,8 +403,8 @@ li {
 /* 푸터(하단) 페이지 시작 */
 
 .footer {
-    /* background-color: #202020; */
-    /* 나중에 푸터가 위치를 잡으면 설정 */
+    background-color: #202020;
+    box-shadow: 0 -5px 3px rgba(0, 0, 0, 0.1);
 
     display: flex;
     flex-direction: column;
@@ -275,7 +430,6 @@ li {
     color: #888;
     font-size: 12px;
 }
-
 
 
 
@@ -337,5 +491,10 @@ li {
 
     .btn-login {
         display: none;
+    }
+
+
+    .page {
+        max-width: 768px;
     }
 }
