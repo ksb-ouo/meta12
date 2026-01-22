@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+
+            margin: 0;
+        }
+
+        section {
+            height: 100vh;
+        }
+
+        img {
+            height: auto;
+            width: auto;
+            background-size: cover;
+        }
+
+
+
+        /* 헤더 페이지(상단 메뉴바) */
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        li {
+            list-style: none;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: white;
+            padding: 10px 24px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+            gap: 20px;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-logo i {
+            font-size: 24px;
+            font-weight: 700;
+
+            justify-content: center;
+            align-items: center;
+
+            color: #228000;
+        }
+
+
+        .navbar-logo a {
+            font-size: 24px;
+            font-weight: 700;
+            color: #228000;
+        }
+
+
+        .navbar-menu {
+            display: flex;
+            gap: 100px;
+        }
+
+
+        .navbar-menu a {
+            display: block;
+            font-weight: 600;
+            font-size: 16px;
+            color: #555;
+            padding: 8px 12px;
+
+            transition: color 0.5s;
+        }
+
+        .navbar-menu a:hover {
+            color: #228000;
+        }
+
+
+
+        .btn-login {
+            color: #333;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 10px;
+
+            border: 1px solid #333;
+            transition: color 0.5s;
+            transition: border-color 0.5s;
+        }
+
+        .btn-login:hover {
+            color: #228000;
+            border-color: #228000;
+        }
+
+
+        .navbar-toggleBtn {
+            display: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #228000;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+
+
+        /* 1번째 페이지 시작 */
+
+        .home-Bigimg {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .home-Bigimg img {
+            width: 100vw;
+            /* 뷰포트 가로폭 100% */
+            height: 70vh;
+            /* 뷰포트 높이 (조절 가능) */
+            object-fit: cover;
+            /* 비율 유지하며 꽉 채움 */
+            object-position: center;
+            /* 중앙 기준 */
+
+            padding-top: 30px;
+        }
+
+        .Bigimg-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+
+            font-size: 25px;
+            font-weight: 900;
+
+            color: #888;
+        }
+
+        .Bigimg-icon .icon1,
+        .Bigimg-icon .icon2,
+        .Bigimg-icon .icon3 {
+            transition: color 0.5s;
+        }
+
+        .Bigimg-icon .icon1:hover,
+        .Bigimg-icon .icon2:hover,
+        .Bigimg-icon .icon3:hover {
+            color: #333;
+        }
+
+
+        .menu-Icon {
+            padding-top: 30px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-Icon span {
+            /* 나중에 a href로 바꾸면 span을 a로 바꿀 것 */
+            width: 200px;
+            height: 60px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .menu-Icon .menuIcon1,
+        .menu-Icon .menuIcon3,
+        .menu-Icon .menuIcon5 {
+            background-color: #228200;
+        }
+
+        .menu-Icon .menuIcon2,
+        .menu-Icon .menuIcon4 {
+            background-color: #8BBA7A;
+        }
+
+
+
+
+        /* 2번째 페이지 시작 */
+
+        .explaining-home {
+            display: flex;
+            gap: 50px;
+
+            justify-content: center;
+            align-items: center;
+
+            padding: 100px 20px;
+        }
+
+
+        /* .explainIMG {} */
+
+        .explainGMP {
+            max-width: 50%;
+            padding-bottom: 50px;
+        }
+
+        .explainGMP .ex-lightgreen {
+            color: #8BBA7A;
+        }
+
+        .explainGMP h2 {
+            color: #333;
+            font-size: 30px;
+        }
+
+        .explainGMP h2 strong {
+            color: #228000;
+        }
+
+        .explainGMP .ex-lightblack {
+            padding-top: 10px;
+            color: #444444;
+        }
+
+
+
+        /* 3번째 페이지 시작 */
+
+        .home-edu {
+            display: flex;
+            flex-direction: column;
+
+            margin: 0 auto;
+
+            padding: 150px;
+            max-width: 80vw;
+        }
+
+
+        .edu-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5%;
+        }
+
+        .represent-edu {
+            padding: 10px;
+            font-size: 36px;
+            font-weight: 900;
+            color: #228000;
+        }
+
+        .edu-icons {
+            color: #333;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 10px;
+
+            border: 1px solid #333;
+            transition: color 0.5s;
+            transition: border-color 0.5s;
+        }
+
+        .edu-icons:hover {
+            color: #228000;
+            border-color: #228000;
+        }
+
+
+        .educations {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            flex: 0 1 0;
+
+            gap: 50px;
+            padding-top: 20px;
+        }
+
+        .edu1,
+        .edu2,
+        .edu3 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .edu1 .h3,
+        .edu2 .h3,
+        .edu3 .h3 {
+            padding: 20px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .edu1 .p,
+        .edu2 .p,
+        .edu3 .p {
+            font-size: 16px;
+            font-weight: 500;
+            color: #888;
+        }
+
+
+
+        /* 4번째 페이지 시작 */
+
+        .home-notice {
+            display: flex;
+            flex-direction: column;
+
+            margin: 0 auto;
+
+            padding: 150px;
+            max-width: 80vw;
+        }
+
+
+        .notice-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 5%;
+        }
+
+        .represent-notice {
+            padding: 10px;
+            font-size: 36px;
+            font-weight: 900;
+            color: #228000;
+        }
+
+        .notice-icons {
+            color: #333;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 10px;
+
+            border: 1px solid #333;
+            transition: color 0.5s;
+            transition: border-color 0.5s;
+        }
+
+        .notice-icons:hover {
+            color: #228000;
+            border-color: #228000;
+        }
+
+
+        .notice-inside {
+            display: flex;
+            flex-direction: column;
+
+            padding: 50px 30px;
+            background-color: #D9D9D9;
+            border-radius: 20px;
+        }
+
+        .insides {
+            border-left: 5px solid #228000;
+            padding-left: 30px;
+
+            gap: 20px;
+        }
+
+        .notice-inside p {
+            justify-content: center;
+            align-items: left;
+            font-size: 16px;
+        }
+
+
+
+
+        /* 푸터(하단) 페이지 시작 */
+
+        .footer {
+            background-color: #202020;
+            box-shadow: 0 -5px 3px rgba(0, 0, 0, 0.1);
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: left;
+            align-items: left;
+
+            padding: 35px;
+
+            flex-grow: 1;
+        }
+
+        .footer-logo {
+            padding-bottom: 50px;
+        }
+
+        .footer-msg {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .footer-downmsg {
+            color: #888;
+            font-size: 12px;
+        }
+
+
+
+
+
+
+
+        /* [반응형 - 모바일 (768px 이하)] */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px 24px;
+            }
+
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+                gap: 0;
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .navbar-menu li {
+                width: 100%;
+            }
+
+            .navbar-menu a {
+                padding: 16px 20px;
+                border-bottom: 1px solid #f1f1f1;
+            }
+
+            .dropdown-content {
+                display: block;
+                position: static;
+                box-shadow: none;
+                background-color: #f9f9f9;
+                width: 100%;
+                transform: none;
+                padding: 0;
+            }
+
+            .dropdown-content li a {
+                padding-left: 40px;
+                font-size: 14px;
+                color: #777;
+            }
+
+            .navbar-toggleBtn {
+                display: block;
+                position: absolute;
+                right: 24px;
+                top: 18px;
+            }
+
+            .btn-login {
+                display: none;
+            }
+
+
+            .page {
+                max-width: 768px;
+            }
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <!-- 헤더 페이지(상단 메뉴바) -->
+
+    <header class="navbar">
+        <div class="navbar-logo">
+            <i class="fa-solid fa-leaf"></i>
+            <a href="#">BiOLMS</a>
+        </div>
+
+        <ul class="navbar-menu">
+            <li><a href="#">기관소개</a></li>
+            <li><a href="#">교육소개</a></li>
+            <li><a href="#">교육신청</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">나의 강의실</a></li>
+        </ul>
+
+        <div class="navbar-icons">
+            <a href="#" class="btn-login">LOGIN</a>
+            <a href="#" class="navbar-toggleBtn">
+                <i class="fa-solid fa-list"></i>
+            </a>
+        </div>
+    </header>
+
+
+    <!-- 홈 -->
+
+    <!-- 1번째 페이지 -->
+    <section class="page">
+        <div class="home-Bigimg">
+            <img src="https://picsum.photos/350/?blur">
+            <div class="Bigimg-icon">
+                <span class="icon1"><i class="fa-solid fa-window-minimize"></i></span>
+                <span class="icon2"><i class="fa-solid fa-window-minimize"></i></span>
+                <span class="icon3"><i class="fa-solid fa-window-minimize"></i></span>
+            </div>
+        </div>
+
+        <div class="menu-Icon"> <!-- 나중에 각각의 span을 a href로 바꿀 것(아이콘을 통해 다른 페이지로) -->
+            <span class="menuIcon1">나의 강의실</span>
+            <span class="menuIcon2">교육과정 소개</span>
+            <span class="menuIcon3">공지사항</span>
+            <span class="menuIcon4">문의사항</span>
+            <span class="menuIcon5">온라인 교육신청</span>
+        </div>
+    </section>
+
+    <!-- 2번째 페이지 -->
+
+    <section class="explaining-home page">
+        <div class="explainIMG">
+            <img src="https://picsum.photos/330/250">
+        </div>
+
+        <div class="explainGMP">
+            <p class="ex-lightgreen">Before education</p>
+            <h2>What is <strong>GMP</strong>?</h2>
+            <p class="ex-lightblack"> <!-- 내용 추가 필요! -->
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.
+                Nisl tincidunt eget nullam non.
+                </br> </br>
+                Quis hendrerit dolor magna eget est lorem ipsum dolor sit.
+                Volutpat odio facilisis mauris sit amet massa.
+                Commodo odio aenean sed adipiscing diam donec adipiscing tristique.
+                Mi eget mauris pharetra et.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- 3번째 페이지 -->
+
+    <section class="home-edu page">
+        <div class="edu-top">
+            <div class="represent-edu">
+                대표 교육과정
+            </div>
+            <div class="edu-icon">
+                <a href="#" class="edu-icons">교육 더보기</a>
+            </div>
+        </div>
+        <div class="educations"> <!--이후 교육과정 클릭 시 넘어가도록 바꾸기-->
+            <div class="edu1">
+                <img src="https://picsum.photos/350/300">
+                <h3></br>GMP 기초</h3>
+                <p>의약품 제조 및 품질관리기준</p>
+            </div>
+
+            <div class="edu2">
+                <img src="https://picsum.photos/350/300">
+                <h3></br>GMP 기본</h3>
+                <p>GMP와 의약품의 이해</p>
+            </div>
+
+            <div class="edu3">
+                <img src="https://picsum.photos/350/300">
+                <h3></br>GMP 심화</h3>
+                <p>제약바이오품질 실무자 과정</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 4번째 페이지 -->
+
+    <section class="home-notice page">
+        <div class="notice-top">
+            <h2 class="represent-notice">
+                공지사항
+            </h2>
+            <div class="notice-icon">
+                <a href="#" class="notice-icons">공지 더보기</a>
+            </div>
+        </div>
+        <div class="notice-inside"> <!--내용 추가 예정-->
+            <div class="insides">
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+            </div>
+            </br></br>
+            <div class="insides">
+                <p> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            </br></br>
+            <div class="insides">
+                <p> Nisl tincidunt eget nullam non.</p>
+            </div>
+            </br></br>
+            <div class="insides">
+                <p> Quis hendrerit dolor magna eget est lorem ipsum dolor sit.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 푸터(하단) 페이지 -->
+    <footer class="footer">
+
+        <div class="footer-logo">
+            <div class="navbar-logo"> <!-- 헤더 로고에서 이미 값을 주었기 때문에 유지 -->
+                <i class="fa-solid fa-leaf"></i>
+                <a href="#">BiOLMS</a>
+            </div>
+        </div>
+
+        <div class="footer-msg">
+            BiOLMS | 바이오 품질 교육 플랫폼
+            </br></br>
+            운영기관: BiOLMS | 주소: -
+            대표전화: 02-000-0000 | email: help@biolms.kr
+        </div>
+
+        <div class="footer-downmsg">
+            ⓒ 2026 BiOLMS | GMP & Bio Quality Education Platform
+        </div>
+    </footer>
+
+
+    <script>
+        const toggleBtn = document.querySelector(".navbar-toggleBtn");
+        const menu = document.querySelector(".navbar-menu");
+        const icons = document.querySelector(".navbar-icons");
+
+        toggleBtn.addEventListener("click", (e) => {
+            // 기본 동작(링크 이동) 방지
+            e.preventDefault();
+            menu.classList.toggle("active");
+        });
+
+
+
+        // 휠을 아래로 굴리면 다음 페이지로 넘어가고,
+        // 휠을 위로 굴리면 이전 페이지로 돌아가는 동작
+        // 모든 section(page)을 가져옴
+        const pages = document.querySelectorAll(".page");
+
+        let currentPage = 0;     // 현재 보고 있는 섹션 번호
+        let isScrolling = false; // 연속 스크롤 방지용
+
+        window.addEventListener("wheel", (e) => {
+            // 스크롤 중이면 무시
+            if (isScrolling) return;
+
+            // 휠을 아래로 내렸을 때
+            if (e.deltaY > 0) {
+                if (currentPage < pages.length - 1) {
+                    currentPage++;
+                }
+            }
+            // 휠을 위로 올렸을 때
+            else {
+                if (currentPage > 0) {
+                    currentPage--;
+                }
+            }
+
+            isScrolling = true;
+
+            // 해당 section으로 이동
+            pages[currentPage].scrollIntoView({
+                behavior: "smooth"
+            });
+
+            // 스크롤 잠금 해제 (0.8초 후)
+            setTimeout(() => {
+                isScrolling = false;
+            }, 800);
+        });
+    </script>
+</body>
+
+</html>
