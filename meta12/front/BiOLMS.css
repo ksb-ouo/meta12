@@ -64,7 +64,7 @@ li {
 
 
 .navbar-logo a {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
     color: #228000;
 }
@@ -90,9 +90,16 @@ li {
     color: #228000;
 }
 
+.menu-login {
+    /* 모바일로만 보이는 '로그인' 메뉴 */
+    display: none;
+    text-align: right;
+}
+
 
 
 .btn-login {
+    /* PC에서만 보이는 '로그인' 버튼 */
     color: #333;
     padding: 5px 15px;
     border-radius: 20px;
@@ -210,7 +217,10 @@ li {
 }
 
 
-/* .explainIMG {} */
+.explainIMG img {
+    height: 300px;
+    width: 450px;
+}
 
 .explainGMP {
     max-width: 50%;
@@ -265,6 +275,7 @@ li {
 }
 
 .edu-icons {
+    display: none;
     color: #333;
     padding: 5px 15px;
     border-radius: 20px;
@@ -314,6 +325,13 @@ li {
     font-size: 16px;
     font-weight: 500;
     color: #888;
+}
+
+.edu1 img,
+.edu2 img,
+.edu3 img {
+    height: 300px;
+    width: 350px;
 }
 
 
@@ -427,9 +445,14 @@ li {
 
 /* [반응형 - 모바일 (768px 이하)] */
 @media screen and (max-width: 768px) {
+    .page {
+        max-width: 768px;
+    }
+
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         padding: 16px 24px;
     }
 
@@ -477,12 +500,38 @@ li {
         top: 18px;
     }
 
+
+    /* 모바일에서는 로그인 메뉴만 보이게 버튼을 없앰 */
     .btn-login {
         display: none;
     }
 
+    /* 메뉴가 나오는 bar를 눌러서 메뉴를 활성화시키면 로그인 메뉴가 생김 */
+    .navbar-menu.active .menu-login {
+        display: block;
+    }
 
-    .page {
-        max-width: 768px;
+
+    /* 1번째 페이지 메뉴 박스, 보기 좋게 글자를 줄임 */
+    .menu-Icon span {
+        font-size: 16px;
+    }
+
+
+    /* 2번째 페이지, GMP 설명만 들어오도록 사진 제거 */
+    .explainIMG {
+        display: none;
+    }
+
+
+    /* 3번째 페이지, 대표 교육과정 1개만 보이도록 */
+    .educations .edu1,
+    .educations .edu3 {
+        display: none;
+    }
+
+    /* 3번째 페이지, 교육 더보기 버튼 활성화 */
+    .edu-icons {
+        display: block;
     }
 }

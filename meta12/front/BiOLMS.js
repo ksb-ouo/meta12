@@ -54,9 +54,9 @@ window.addEventListener("wheel", (e) => {
 
 // 이미지를 n초에 한 번씩 다음 이미지로 넘어가게 만드는 동작
 const images = [
-    "https://picsum.photos/id/1011/1200/700",
-    "https://picsum.photos/id/1015/1200/700",
-    "https://picsum.photos/id/1016/1200/700"
+    "https://plus.unsplash.com/premium_photo-1676325101835-f2e4214eff5b?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://plus.unsplash.com/premium_photo-1667516508065-6d49bc331259?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1486825586573-7131f7991bdd?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ];  // 이미지 목록 배열
 
 // 필요한 요소들을 가져와 변수로 설정
