@@ -143,30 +143,18 @@ li {
     padding-top: 30px;
 }
 
-.Bigimg-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
+.Bigimg-icon .icon {
+    color: #aaa;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 25px;
 
-    font-size: 25px;
-    font-weight: 900;
-
-    color: #888;
+    transition: color 0.3s;
 }
 
-.Bigimg-icon .icon1,
-.Bigimg-icon .icon2,
-.Bigimg-icon .icon3 {
-    transition: color 0.5s;
-}
-
-.Bigimg-icon .icon1:hover,
-.Bigimg-icon .icon2:hover,
-.Bigimg-icon .icon3:hover {
+.Bigimg-icon .icon.active {
     color: #333;
 }
-
 
 .menu-Icon {
     padding-top: 30px;
@@ -235,7 +223,7 @@ li {
 
 .explainGMP h2 {
     color: #333;
-    font-size: 30px;
+    font-size: 36px;
 }
 
 .explainGMP h2 strong {

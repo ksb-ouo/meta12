@@ -49,3 +49,56 @@ window.addEventListener("wheel", (e) => {
         isScrolling = false;
     }, 800);
 });
+
+
+
+// 이미지를 n초에 한 번씩 다음 이미지로 넘어가게 만드는 동작
+const images = [
+    "https://picsum.photos/id/1011/1200/700",
+    "https://picsum.photos/id/1015/1200/700",
+    "https://picsum.photos/id/1016/1200/700"
+];  // 이미지 목록 배열
+
+// 필요한 요소들을 가져와 변수로 설정
+const bigImg = document.querySelector(".home-Bigimg img");
+const imgIcons = document.querySelectorAll(".Bigimg-icon .icon");
+const homeBigImg = document.querySelector(".home-Bigimg");
+
+let currentIndex = 0;  // 현재 이미지(페이지)의 번호
+
+
+// 이미지(다음 이미지로 넘어감)와 아이콘(아이콘의 색)을 바꾸는 기능
+function changeImage(index) {
+    bigImg.src = images[index];
+
+    imgIcons.forEach(icon => icon.classList.remove("active"));
+    imgIcons[index].classList.add("active");
+}
+
+changeImage(0);
+
+
+// 자동으로 3초에 한 번씩 넘어가게 만듦, 마우스를 가져가면 멈춤
+let intervalId = setInterval(nextImage, 3000);
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    changeImage(currentIndex);
+}
+
+homeBigImg.addEventListener("mouseenter", () => {
+    clearInterval(intervalId);
+});
+
+homeBigImg.addEventListener("mouseleave", () => {
+    intervalId = setInterval(nextImage, 3000);
+});
+
+
+// 클릭 시 해당 위치의 이미지로 바로 넘어가게 만드는 부분 
+imgIcons.forEach((icon, index) => {
+    icon.addEventListener("click", () => {
+        currentIndex = index;  // 몇 번째 아이콘을 눌렀는지, 해당 위치 이미지로 이동
+        changeImage(currentIndex);  // 함수는 위에서 만들어뒀던 함수를 사용하여 바로 넘어가도록 만듦 
+    });
+});
