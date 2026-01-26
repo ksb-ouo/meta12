@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 배열(Array)은 자바스크립트의 내장 객체 중 가장 많이 쓰이는 자료형
+        // 여러개의 데이터를 함께 제어하기 위해 사용함
+
+
+        // 1. 정의하는 법:
+
+        let arr1 = new Array();   // 배열의 크기를 지정하지 않음
+        let arr2 = new Array(4);  // 배열의 크기를 지정함 (4)
+        let arr3 = ["one", "two", "three", "four"];       // 배열 선언, 실제로 가장 많이 쓰이는 정의법.
+        // let arr3 = [];  // 빈 배열 (넣어야 할 것이 있을 때 먼저 배열을 만드는 법). new Array라는 글자를 잘 쓰지 않음.
+        let arr4 = Array("one", "two", "three", "four");  // Array 객체를 사용한 배열 선언
+
+
+        // 실제 많이 쓰이는 예시
+        // new Array()문법 대신 아래와 같이 간결하게 빈 배열을 만들고 필요한 데이터를 인덱스별로
+        // 하나씩 입력하는 방식으로 배열을 생성함
+        let numbers = [];
+        for (let i = 0; i < 5; i++) {
+            numbers[i] = i * 10;
+        }
+        console.log(numbers);
+        console.log(numbers.length); // 배열의 길이. 5
+
+
+
+
+
+        // 2. 배열 객체의 다양한 메서드 (p. 594)
+
+
+        // 1) concat() : 배열 2개를 합쳐서 새로운 배열을 만듦
+        let nums = [1, 2, 3];
+        let chars = ["a", "b", "c", "d"];
+        let numChars = nums.concat(chars);
+        console.log(numChars);
+
+
+
+        // 2) join() : 각 요소를 연결해서 하나의 문자열을 만들며, 중간에 구분자를 넣을 수 있음
+        let string1 = nums.join();
+        console.log(string1);  // 1,2,3   (쉼표가 구분자로 추가되지만, 쉼표 사이도 다 붙음. 띄어서 쓰고 싶다면 ', ' 를 넣어야 함.)
+
+        let string2 = chars.join('_');
+        console.log(string2);  // a_b_c_d   (언더스코어가 구분자로 추가됨)
+
+
+        let date = ["2026", "01", "19"];
+        let dateToString = date.join("-");
+        console.log(dateToString);    // 2026-01-19
+
+
+
+        // 3) filter() : 조건에 맞는 요소만 골라서 새로운 배열을 만듦  (짝수만 담거나, 홀수만 담거나 등등)
+        // ** 중요!
+        const integers = [1, 2, 3, 4, 5, 6];
+        const evenNumbers = integers.filter((num) => num % 2 == 0);  // 짝수만 골라담기.  num이라는 값은 크게 중요하지 않음(다른 이름을 써도 괜찮음)   
+        // 참(2로 나누었을 때 나머지가 0인 경우)일 경우에만 값을 담음.   
+
+        console.log(evenNumbers);;    // [2,4,6] 
+
+
+
+        // 4) map() : 모든 요소를 변환해서 새로운 배열을 만듦 (값 자체를 수정. 반복문을 그대로 사용 가능)  (내용을 전부 싹 바꿈. ex) 내용을 전부 20% 할인한 가격으로 다시 바꾸는 등)
+        // ** 중요!
+        const prices = [10000, 30000, 50000,];
+        const discounts = prices.map((p) => p * 0.8);  // 20% 할인 (0.8배)
+        console.log(discounts);   // [8000, 24000, 40000]  
+
+
+        // '=>'   화살표 모양, arrow function 
+        // 모습을 익힐 것!
+
+
+        // 예시
+        const users = [
+            { name: '철수', age: 18 },
+            { name: '민수', age: 25 },
+            { name: '영희', age: 22 },
+        ];                // filter()로 19세 이상을 고름  .  // map으로 19세 이상의 이름을 고름
+        const adultNames = users.filter((u) => u.age >= 19).map((u) => u.name);  // filter와 map이 둘 다 사용되어 있음
+        console.log(adultNames);  // 19세 이상의 성인(민수, 영희)만 출력됨
+
+
+
+
+        // 5) indexOf() : 해당 요소의 위치를 알려줌
+        const fruits = ["사과", "바나나", "딸기"];  // 사과=0 바나나=1 딸기=2
+        const index = fruits.indexOf('바나나');
+        console.log(index);   // 1
+
+
+
+        // 6) splice() : 원하는 위치(인덱스)에 요소를 추가 혹은 삭제함
+        // 인수 : 함수 또는 메서드의 () 안에 들어가는 값
+        // 첫 번째 인수는 삭제할 인덱스 넘버 (두 번째 인수가 없으면 끝까지 모두)
+        // 두 번째 인수는 삭제할 아이템 개수
+        // 세 번째 인수는 추가할 아이템 
+
+        let study = ["html", "css", "javascript", "jquery", "react", "nodejs"];
+        let js = study.splice(2);   // 2번 인덱스부터 삭제, (두 번째 인수가 없으면 끝까지 모두)
+        // study 배열에서는 삭제가 발생, 새로 만든 js에는 study에서 삭제된 데이터가 들어감
+        console.log(study);  // ['html', 'css']
+        console.log(js);     // ['javascript', 'jquery', 'react', 'nodejs']
+
+        let jquery = js.splice(1, 1);  // 1번 인덱스부터 1개 삭제
+        console.log(js);       // ['javascript', 'react', nodejs']
+        console.log(jquery);   // ['jquery']
+
+        let modernJs = jquery.splice(1, 0, 'typescript');  // 1번 인덱스부터 0개 삭제, 'typescript' 추가
+        console.log(js);        // ['javascript', 'typescript', 'react', 'nodejs']
+        console.log(modernJs);  // [] 빈 배열
+
+
+        // 7) slice() : 특정 인덱스 범위의 요소를 꺼낸다. 원본에서 삭제가 되지는 않음
+        // 첫 번째 인수는 삭제할 인덱스
+        // 두 번째 인수는 삭제할 인덱스 범위
+
+        let colors = ["red", "green", "blue", "white", "black"];
+        let sliced1 = colors.slice(2);
+        let sliced2 = colors.slice(2, 4);
+        console.log(sliced1);  //  ['blue', 'white', 'black']
+        console.log(sliced2);  //  ['blue', 'white']
+    </script>
+</body>
+
+</html>

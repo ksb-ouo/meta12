@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 객체 만드는 법
+        // 키: 밸류의 쌍으로 저장
+        // 모든 자료형을 사용할 수 있음: 숫자, 문자, 불리언, 배열, 다른 객체, 객체의 배열 등등...
+        // key는 이름표의 역할, value는 내용물의 역할
+        let hero = {
+            name: "아이언맨",   // 문자
+            age: 40,   // 숫자
+            isAlive: true,   // 불리언
+        };  // 배열: [ ]   객체: { }     객체 안에는 key: value, key: value, ...
+
+        let anotherHero = {
+            name: "닥터스트레인지",
+            age: 38,
+            isAlive: true,
+        };
+
+
+
+        // 1. 조회하기 (객체 이름.키 이름)
+        console.log(hero.name);
+        console.log(hero.age);
+        console.log(hero.isAlive);
+
+        console.log(anotherHero.name);
+        console.log(anotherHero.age);
+        console.log(anotherHero.isAlive);
+
+        // 2. 수정하기
+        hero.age = 41;
+        console.log(hero.age);    // 41
+
+        // 3. 추가하기 (새로운 속성 추가, 객체에 새로운 정보를 추가하는 것은 그냥 . 을 찍고 새로운 속성을 추가하면 됨)
+        hero.color = "red";
+        anotherHero.color = "orange";
+        console.log(hero.color);   // red
+        console.log(anotherHero.color);   // orange
+    </script>
+</body>
+
+</html>

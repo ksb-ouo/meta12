@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>블로그 포스트</title>
+    <link rel="stylesheet" href="blog.css" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            /* 앞으로 모든 css에 이 3줄을 작성할 것 */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            padding-top: 50px;
+            color: #333
+        }
+
+        .blog-post {
+            width: 80%;
+            background-color: white;
+            padding: 40px;
+
+            margin: 0 auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+            overflow: hidden;
+            padding-bottom: 30px;
+        }
+
+        .category {
+            display: inline-block;
+
+            background-color: #3498db;
+            color: white;
+
+            padding: 8px 20px;
+            border-radius: 20px;
+
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 36px;
+            padding-top: 20px;
+        }
+
+
+        .post-meta {
+            display: flex;
+            flex-direction: row;
+
+            padding-top: 20px;
+        }
+
+        .post-meta span::after {
+            /* HTML에는 없는 내용 (구분선) 을 추가하는 부분 */
+            content: " | ";
+            color: #e4e4e4;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .post-meta span:last-child::after {
+            content: " ";
+        }
+
+
+        .division-line1 {
+            border-top: 1px solid #c7c7c7;
+            margin: 30px 0px;
+        }
+
+        .division-line2 {
+            border-top: 3px solid #3498db;
+            margin: 14px 0px;
+
+        }
+
+        .post-content {
+            padding-top: 20px;
+
+
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        h2 {
+            padding-top: 30px;
+            font-size: 26px;
+        }
+
+        p {
+            padding-bottom: 20px;
+        }
+
+        blockquote {
+            background-color: #f3f3f3;
+            color: #888;
+            font-style: italic;
+
+
+            border-left: 5px #3498db solid;
+
+            padding: 20px 30px;
+        }
+
+
+        ul,
+        ol {
+            padding-left: 50px;
+        }
+
+        li {
+            padding-bottom: 15px;
+        }
+
+
+        .note {
+            padding: 20px 15px;
+
+            background-color: #fff9e9;
+            border: 2px #ffbc57 solid;
+            border-radius: 8px;
+        }
+
+        strong {
+            color: #ffbc57;
+            font-weight: bold;
+        }
+
+
+        .tags {
+            display: flex;
+            flex-direction: row;
+
+            gap: 10px;
+
+            padding-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+
+
+            background-color: #f2f2f2;
+            font-size: 12px;
+
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin: 0 4px;
+
+            transition: background-color 0.5s;
+            transition: color 0.2s;
+        }
+
+        .tag:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .share {
+            display: flex;
+            gap: 30px;
+        }
+
+        .share a {
+            text-decoration: none;
+            color: #3498db;
+
+            transition: text-decoration 0.5s;
+        }
+
+        .share a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <span class="category">기술</span>
+            <h1>CSS 레이아웃의 기초</h1>
+            <div class="post-meta">
+                <span class="author">작성자: 김개발</span>
+                <span class="date">2024년 1월 15일</span>
+                <span class="read-time">5분 소요</span>
+            </div>
+        </header>
+
+        <div class="division-line1"></div>
+
+        <div class="post-content">
+            <p class="intro">
+                웹 페이지를 만들 때 가장 중요한 것 중 하나는 바로 레이아웃입니다.
+                오늘은 CSS를 이용한 레이아웃의 기본 개념에 대해 알아보겠습니다.
+            </p>
+
+            <h2>박스 모델이란?</h2>
+
+            <div class="division-line2"></div>
+
+
+            <p>
+                모든 HTML 요소는 박스 형태로 이루어져 있습니다. 이 박스는 content,
+                padding, border, margin으로 구성됩니다.
+            </p>
+
+            <blockquote>
+                "디자인은 단순히 어떻게 보이고 느껴지는가가 아니다. 어떻게
+                작동하는가이다." - 스티브 잡스
+            </blockquote>
+
+            <h2>주요 개념</h2>
+
+            <div class="division-line2"></div>
+
+            <p>CSS 레이아웃을 이해하기 위해 알아야 할 핵심 개념들입니다:</p>
+
+            <ul>
+                <li>Display 속성: 요소가 화면에 표시되는 방식을 결정합니다</li>
+                <li>Position 속성: 요소의 위치를 지정하는 방법입니다</li>
+                <li>Float: 요소를 좌우로 띄워 배치할 수 있습니다</li>
+                <li>Flexbox: 유연한 박스 레이아웃을 만들 수 있습니다</li>
+            </ul>
+
+            <h2>실전 팁</h2>
+
+            <div class="division-line2"></div>
+
+            <ol>
+                <li>항상 박스 모델을 염두에 두고 작업하세요</li>
+                <li>개발자 도구를 활용하여 요소를 검사하세요</li>
+                <li>작은 컴포넌트부터 시작하여 점진적으로 확장하세요</li>
+            </ol>
+
+            <div class="note">
+                <strong>참고:</strong> 최신 브라우저에서는 Flexbox와 Grid를 적극적으로
+                활용하는 것을 권장합니다.
+            </div>
+
+            <h2>결론</h2>
+
+            <div class="division-line2"></div>
+
+
+            <p>
+                CSS 레이아웃은 웹 개발의 기본이자 핵심입니다. 꾸준한 연습을 통해
+                다양한 레이아웃을 자유자재로 구현할 수 있게 될 것입니다.
+            </p>
+        </div>
+
+        <div class="division-line1"></div>
+
+
+        <footer class="post-footer">
+            <div class="tags">
+                <span class="tag">CSS</span>
+                <span class="tag">웹개발</span>
+                <span class="tag">레이아웃</span>
+            </div>
+            <div class="share">
+                <span>공유하기:</span>
+                <a href="#">페이스북</a>
+                <a href="#">트위터</a>
+                <a href="#">링크복사</a>
+            </div>
+        </footer>
+    </article>
+</body>
+
+</html>

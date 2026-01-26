@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 상품 가격 합계 구하기, 장바구니에 담긴 모든 상품의 가격 합계를 구하세요.
+        const cart = [
+            { product: '키보드', price: 45000 },
+            { product: '마우스패드', price: 12000 },
+            { product: 'USB 케이블', price: 8000 },
+            { product: '웹캠', price: 35000 }
+        ];
+
+        let totalCart = 0;
+        for (const data of cart) {
+            totalCart += data.price;
+        }
+
+        console.log(`총 가격: ${totalCart}원`);
+
+
+
+        // 2. 합격자 명단 출력하기, 점수가 60점 이상인 학생의 이름과 점수를 출력하세요.
+
+        const students = [
+            { name: '강민수', score: 75 },
+            { name: '오세영', score: 48 },
+            { name: '한지민', score: 82 },
+            { name: '윤서준', score: 55 },
+            { name: '최유진', score: 91 }
+        ];
+
+
+
+        // 3. 평균 가격 계산하기, 메뉴들의 평균 가격을 계산하세요.
+
+        const menu = [
+            { dish: '김치찌개', price: 8000 },
+            { dish: '된장찌개', price: 7000 },
+            { dish: '제육볶음', price: 9000 },
+            { dish: '비빔밥', price: 8500 }
+        ];
+
+
+
+        // 4. 특정 등급 회원 수 세기, 등급이 VIP인 회원의 수를 세세요.
+
+        const members = [
+            { name: '김철수', grade: 'VIP' },
+            { name: '이영희', grade: 'GOLD' },
+            { name: '박지성', grade: 'VIP' },
+            { name: '손흥민', grade: 'SILVER' },
+            { name: '김연아', grade: 'VIP' },
+            { name: '류현진', grade: 'GOLD' }
+        ];
+
+
+
+        // 5. 영화 제목 목록 만들기, 모든 영화 제목을 하나의 문자열로 만드세요. (','로 구분)
+
+        const movies = [
+            { title: '기생충', director: '봉준호' },
+            { title: '올드보이', director: '박찬욱' },
+            { title: '살인의 추억', director: '봉준호' },
+            { title: '부산행', director: '연상호' }
+        ];
+
+
+    </script>
+</body>
+
+</html>
