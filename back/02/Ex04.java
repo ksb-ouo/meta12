@@ -21,6 +21,7 @@ public class Ex04 {
 		byte data1 = 3;
 		byte data2 = 5;
 		int value5 = data1 + data2;
+		System.out.println(value5);
 		
 		
 		
@@ -28,6 +29,7 @@ public class Ex04 {
 		System.out.println(value6);
 		
 		int value7 = 5 + (int) 3.5;  // 3.5를 int 취급하기에 int 자료형을 취급해야 함
+		System.out.println(value7);
 		
 		
 		double value8 = 5 / 2.0; 
