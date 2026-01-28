@@ -29,6 +29,9 @@ public class Ex03 {
         // } else {
         // 거짓일 경우
         // }
+
+        // System.out.println("문자열A " + 변수 + " 문자열B");
+        // 출력: 문자열A (해당 변수 값) 문자열B
     }
 
 }
