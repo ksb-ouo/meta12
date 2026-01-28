@@ -1,4 +1,3 @@
-
 public class Ex02 {
 	public static void main(String[] args) {
 		// 변수의 이름
