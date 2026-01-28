@@ -2,7 +2,7 @@ public class Ex03 {
 
     public static void main(String[] args) {
 
-        // 세 점수의 평균이 60점 이상이면 통과, 아니면 탈락
+        // 세 점수의 평균이 60점 이상이면 합격, 아니면 불합격
 
         int kor = 90;
         int eng = 80;
@@ -12,15 +12,21 @@ public class Ex03 {
         int scores = (kor + eng + mat);
         // 총점
 
-        double average = scores / 3.0; // scores가 int기 때문에 double에 담기 위해서 3을 3.0(double type)으로 적는다
+        double average = scores / 3.0;
         // 평균
+        // scores가 int이므로, 결과를 double(소수점까지 보이도록)로 표현하기 위해 3을 3.0(double type)으로 적는다
 
-        if (average >= 60) {
-            System.out.println("통과입니다.");
+        if (average >= 60) { // if문으로 평균이 60 이상일 경우, 미만일 경우를 나누기 위함
+            System.out.println("합격입니다.");
         } else {
-            System.out.println("탈락입니다, 다시 시험을 보세요.");
+            System.out.println("불합격입니다, 다시 시험을 보세요.");
         }
 
+        // if (조건) {
+        // 참일 경우
+        // } else {
+        // 거짓일 경우
+        // }
     }
 
 }
