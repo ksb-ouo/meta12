@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+
+        .header {
+            background-color: #2c3e50;
+
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 1rem 0;
+            /* padding: 안쪽 여백, rem: 글자 크기 */
+        }
+
+        .logo {
+            color: white;
+            padding: 20px;
+        }
+
+        .logo_menu ul {
+            list-style: none;
+
+            display: flex;
+            gap: 10px;
+
+            padding: 20px;
+        }
+
+        .logo_menu a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        .main_body {
+            width: 80%;
+            /* 부모 길이의 80% */
+
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: space-between;
+            /* 양쪽 끝으로 떨어뜨려 둠 */
+
+            align-items: flex-start;
+
+            margin-top: 20px;
+        }
+
+
+        .main_left {
+            display: flex;
+            flex-direction: column;
+
+            flex: 3;
+            background-color: white;
+
+            padding: 20px;
+            border-radius: 8px;
+            min-height: 300px;
+        }
+
+        .content {
+            background-color: #3498db;
+            color: white;
+
+            display: flex;
+
+            margin-top: 20px;
+            height: 100px;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .main_right {
+            margin: 50px;
+
+            justify-content: center;
+            align-items: center;
+
+            background-color: #e1e1e1;
+            flex: 1;
+
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .main_right a {
+            color: #333;
+            text-decoration: none;
+        }
+
+
+
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+
+            text-align: center;
+
+            margin-top: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- id는 전체에 같은 것이 1개, class는 여러 개여도 가능하다. -->
+
+
+    <header class="header">
+
+        <h1 class="logo">MyClass</h1>
+
+        <nav class="logo_menu">
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">강의소개</a></li>
+                <li><a href="#">게시판</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main class="main_body">
+
+        <div class="main_left">
+            <h2>오늘의 학습 주제: 레이아웃</h2>
+            <p>HTML로 구조를 잡고 CSS Flexbox를 이용해 배치하는 방법을 배웁니다.</p>
+
+            <div class="content">
+                컨텐츠 영역
+            </div>
+        </div>
+
+
+
+        <aside class="main_right">
+            <h3>공지사항</h3>
+            <ul>
+                <li><a href="#">과제 제출 기한 안내</a></li>
+                <li><a href="#">준비물: 노트북, 열정</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p class="footer_content">ⓒ 2026 MyClass, All rights reserved</p>
+
+    </footer>
+
+</body>
+
+</html>
