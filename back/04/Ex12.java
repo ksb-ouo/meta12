@@ -27,5 +27,7 @@ public class Ex12 {
             number++;
         }
 
+        // int endValue = number + 10 등으로 종료 시점을 변수로 따로 제작할 수도 있음.
+
     }
 }
