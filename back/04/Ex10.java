@@ -26,8 +26,13 @@ public class Ex10 {
         while (i <= 5) { // i가 5 보다 작거나 같을 경우,
             System.out.println("현재 값: " + i); // 조건이 참일 경우 반복 시행
             i++; // i = i + 1
+
+            // int k = 1; // 변수를 while 문 안에 정의했을 경우, while 문 안에서만 사용 가능. 밖에서 사용 불가능.
         }
-        // 0, 1, 2, 3, 4, 5, 이후 while 문 탈출
+        // 0, 1, 2, 3, 4, 5, 6이 되면 while 문 탈출
+
+        System.out.println("i의 값: " + i); // 6
+        // System.out.println(k); // error!
 
     }
 }
