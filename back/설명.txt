@@ -1,0 +1,18 @@
+1. 개발환경구축: JDK, Eclipse
+
+
+2. 자료형
+
+	- 기본형 (8개)
+		- 정수: byte < short < int < long ==> int
+		- 실수: float, double ==> double
+		- 문자: char ==> '글자1자'  작은따옴표 안에 글자1자
+		- 불린: true, false
+		
+	- 참조형: 주소를 참조한다
+	
+	
+3. 조건문: if, switch
+
+
+4. 반복문: for, while, do ~ while
