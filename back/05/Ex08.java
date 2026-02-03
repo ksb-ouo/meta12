@@ -22,6 +22,17 @@ public class Ex08 {
          * 
          */
 
+        // -----------------
+
+        int value1; // 변수의 선언 (지금부터 이 변수를 사용할 수 있다)
+        // System.out.println(value1); // 초기화를 하지 않았기 때문에 값이 나오지 않음, error
+
+        int[] value2; //
+        // System.out.println(value2); // 초기화를 하지 않았기 때문에 값이 나오지 않음, error
+
+        int value3 = 0; // 변수의 선언과 초기화가 전부 이루어짐
+        System.out.println(value3); // 0
+
     }
 
 }
