@@ -16,11 +16,11 @@ public class Ex14 {
         // String은 new를 사용했을 경우, sysout를 통해 내용물이 출력됨.
         // 배열의 경우와 다름. (new를 사용한 배열의 경우, sysout를 통해 주소가 출력됨.)
 
-        String str5 = new String("Java");
-        String str6 = new String("Python");
+        // String str5 = new String("Java");
+        // String str6 = new String("Python");
 
-        String ssn = "123456-1234567";
-        String imsiSSN = ssn;
+        // String ssn = "123456-1234567";
+        // String imsiSSN = ssn;
 
         String str10 = "반갑"; // literal 값
         str10 += "습니다."; // str10 = str10 + "습니다."
