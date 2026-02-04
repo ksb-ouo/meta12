@@ -8,6 +8,11 @@ public class Ex12 {
                 { 40, 50, 60 } // 1행
         }; // 0열 1열 2열
 
+        System.out.println("배열의 길이(행의 길이): " + nums.length); // 2
+        System.out.println("배열의 0번째 인덱스의 길이(열의 길이): " + nums[0].length); // 3
+
+        System.out.println();
+
         System.out.println(nums[0][0]); // 10
         System.out.println(nums[0][1]); // 20
         System.out.println(nums[0][2]); // 30
@@ -15,11 +20,14 @@ public class Ex12 {
         System.out.println(nums[1][1]); // 50
         System.out.println(nums[1][2]); // 60
 
+        System.out.println();
+
         // 전체 행, 열과 값을 함께 찍는 for문
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < nums[i].length; j++) {
                 System.out.println("nums[" + i + "][" + j + "] : " + nums[i][j]);
             }
+            System.out.println(); // 행이 끝나면 줄바꿈
         }
     }
 
