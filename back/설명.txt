@@ -39,3 +39,13 @@ int[] score1 = { 80, 90, 70, 100, 85 }
 int[] score2 = new int[]{ 80, 90, 70, 100, 85 }
 int[] score3 = new int[5]
 
+
+
+
+
+
+
+.trim()
+.substring(시작 인덱스, 마지막 인덱스 - 1)
+.replace("", "");
+.split("공통된 구분자");  // 배열로 만들어라
