@@ -49,6 +49,14 @@ public class Ex23 {
         info = info.substring(1); // info.substring(1, info.length());
         // 위의 if문 대신 이런 식으로 처음 붙는 "/"를 제거 가능
 
+        String[] array1 = info.split("/"); // {"aaa,aaa,aaa,aaa", "bbb,bbb,bbb,bbb", ......}
+
+        for (int i = 0; i < array1.length; i++) {
+            String[] array2 = array1[i].split(","); // {"aaa", "aaa", "aaa", "aaa"} {"bbb", .....
+            System.out.printf("%s   %s   %s   %s", array2[0], array2[1], array2[2], array2[3]); // printf: 서식이 있는 출력문
+
+        }
+
         System.out.println(info);
         System.out.println(" -- 프로그램 종료 -- ");
 
