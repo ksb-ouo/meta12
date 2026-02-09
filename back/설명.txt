@@ -142,3 +142,45 @@ for (초깃값; 어디까지; 변화) {이렇게 해라}
 접근제한자: public
 반환타입: void(없음) int double ...
 
+
+
+반환(리턴) 타입:
+*리턴은 무조건 하나를 반환한다
+	1. 반환값 없음
+		public void display() {
+		}
+
+
+	2. 반환값 있음
+		public int display() {
+			return 0;
+		}
+
+		public double display() {
+			return 0.0;
+		}
+
+		public String display() {
+			return "";
+		}
+
+
+	3. 메소드 안으로 들어가는 값이 없는 경우
+		public void display() {
+		}
+
+
+	4. 메소드 안으로 들어가는 값이 있는 경우
+	(매개변수를 이용해 메소드 안으로 값을 넣어줌)
+		public void display(int a) {  // 소괄호() 안의 매개변수를 사용
+		}
+
+		public void display(int a, int b) {
+		}
+
+		public void display(int a, double b) {   // int와 double이 함께라면 double이 뒤쪽에 위치
+		}
+
+		public void display(double a, double b) {
+		}
+
