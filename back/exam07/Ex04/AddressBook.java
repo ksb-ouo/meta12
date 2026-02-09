@@ -16,4 +16,14 @@ public class AddressBook {
         System.out.println(address);
     }
 
+    // (자바 제어자) (리턴(반환)타입) (메서드명) (입력매개변수) {
+    // // 메서드 내용
+    // }
+
+    // 리턴 타입 목록
+    // void: 반환(리턴) 값이 없다
+    // int: 정수 타입으로 내보냄
+    // double: 실수 타입으로 내보냄
+    // String: 문자열 타입으로...
+
 }
