@@ -23,7 +23,7 @@ public class AddressBookExample {
         addressBook1.phone = phone; //
         addressBook1.address = address; //
 
-        System.out.println(addressBook1);
+        System.out.println(addressBook1); // 주소 출력
         System.out.println(addressBook1.name);
         System.out.println(addressBook1.phone);
         System.out.println(addressBook1.address);
