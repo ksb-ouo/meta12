@@ -1,12 +1,14 @@
 package back.exam07.Ex05;
 
 public class Test {
-    // 필드
+    // 필드 // = 전역변수
+    int k;
 
     // 생성자
 
     // 메서드 (4가지 모양)
     // 메서드 호출 (메서드 안의 내용을 실행)
+    // 안에서 선언된 변수는 지역변수
     public void imsi_1() {
         int num1 = 5;
         int num2 = 7;
@@ -19,7 +21,11 @@ public class Test {
     }
 
     public int imsi_3() {
-        return 0;
+        int num1 = 5;
+        int num2 = 7;
+        int hab = num1 + num2;
+        // System.out.println("hab: " + hab);
+        return hab; // 리턴(반환)값, 메소드 실행이 끝나면 해당 값을 내보냄
     }
 
     public int imsi_4(int a, int b) {
